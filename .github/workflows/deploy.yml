@@ -40,6 +40,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             sudo docker pull prakashnagonde/user-app:latest
-            sudo docker stop web-app || true
-            sudo docker rm web-app || true
-            sudo docker run -d --name web-app -p 3005:3000 100xdevs/web-app:latest
+            sudo docker stop user-app || true
+            sudo docker rm user-app || true
+            sudo docker run -d --name user-app -p 3005:3000 prakashnagonde/user-app:latest
