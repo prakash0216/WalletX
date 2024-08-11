@@ -33,7 +33,7 @@ jobs:
         run: docker pull prakashnagonde/user-app:latest
 
       - name: Deploy to EC2
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@main
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}

@@ -4,6 +4,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
+      "env": ["DATABASE_URL"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {
@@ -12,6 +13,11 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "user-app#build": {
+      "dependsOn": ["^build"],
+      "env": ["JWT"],
+      "outputs": [".next/**", "!.next/cache/**"]
     }
   }
 }
