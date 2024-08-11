@@ -13,11 +13,6 @@
     "dev": {
       "cache": false,
       "persistent": true
-    },
-    "user-app#build": {
-      "dependsOn": ["^build"],
-      "env": ["JWT"],
-      "outputs": [".next/**", "!.next/cache/**"]
     }
   }
 }
